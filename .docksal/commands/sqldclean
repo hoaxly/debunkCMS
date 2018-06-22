@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+## Exports sql dump and removes DEFINER
+##
+## usage: fin sqldclean [filename.sql]
+
+is_linux ()
+{
+	uname | grep 'Linux' >/dev/null
+}
+
+PROJECT="${VIRTUAL_HOST%.*}_"
+FILENAME="${PROJECT_ROOT}/dumps/${PROJECT}$(date +%y%m%d-%H%M%S.sql)"
+
+if [ ! -z "$1" ]; then
+  FILENAME=$1
+fi
+fin sqld $FILENAME
+
+echo "Removing DEFINER statements..."
+
+if is_linux; then
+    sed -i 's/DEFINER=[^*]*\*/\*/g' ${FILENAME}
+else
+    # use different syntax for bsd (macos)
+    sed -i '' 's/DEFINER=[^*]*\*/\*/g' ${FILENAME}
+fi
+
+echo "Exported cleaned up dump to:"
+echo $FILENAME

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+## Shortcut for drush cr
+##
+## usage: fin cr
+
+cd ${PROJECT_ROOT}/${DOCROOT}
+fin drush cr

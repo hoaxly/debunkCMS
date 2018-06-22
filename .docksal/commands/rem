@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+## Reinstalls a module using drush
+##
+## usage: fin rem [modulename]
+
+cd ${PROJECT_ROOT}/${DOCROOT}
+fin drush pmu $1 -y && fin drush en $1 -y

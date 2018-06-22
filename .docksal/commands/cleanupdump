@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+## Removes DEFINER statements from a dump file.
+##
+## usage: fin cleanupdump [filename.sql]
+
+is_linux ()
+{
+	uname | grep 'Linux' >/dev/null
+}
+
+if [ ! -f "$1" ]; then
+  echo "Parameter for dumpfile missing or file not found."
+  exit
+fi
+FILENAME=$1
+echo "Removing DEFINER statements... of ${FILENAME}"
+
+if is_linux; then
+    sed -i 's/DEFINER=[^*]*\*/\*/g' ${FILENAME}
+else
+    # use different syntax for bsd (macos)
+    sed -i '' 's/DEFINER=[^*]*\*/\*/g' ${FILENAME}
+fi
+
+echo "Cleaned up dump $FILENAME"

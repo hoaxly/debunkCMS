@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+## Shortcut for watching ao-canvas in drupal 8
+##
+## usage: fin watch
+
+cd ${PROJECT_ROOT}/${DOCROOT}/themes/custom/ao-canvas
+gulp watch

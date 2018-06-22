@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+## Shortcut for compiling ao-canvas in drupal 8
+##
+## usage: fin cr
+
+cd ${PROJECT_ROOT}/${DOCROOT}/themes/ao-canvas
+gulp styleguide

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+## Shortcut for exporting drupal config (with config split) and committing
+##
+## usage: fin commit [flags for 'git commit'] [Commit Message] e.g. fin commit -m 'Wonderful!'
+
+cd ${PROJECT_ROOT}/${DOCROOT}
+fin drush csex -y
+git add ../config
+git commit $1 "$2"

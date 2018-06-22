@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+## Shortcut for drush
+##
+## usage: fin dr [parameters]
+
+cd ${PROJECT_ROOT}/${DOCROOT}
+fin drush uli

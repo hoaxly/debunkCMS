@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+## Clear all search indexes, mark them for reindexing and start indexing.
+##
+## usage: fin reindex
+
+cd ${PROJECT_ROOT}/${DOCROOT}
+fin drush search-api-server-clear multilingual_solr
+fin drush sapi-i
