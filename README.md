@@ -4,10 +4,10 @@ It is based on Thunder, a Drupal distribution for professional publishers.
 
 Features:
 
-A review contenttype that provides all relevant fields to create reviews as structured content.
-Published reviews include ClaimReview schema.org markup, so that your content can be found easily.
-A REST-API, so you can reuse your reviews in mobile apps for example.
-All Thunder features like scheduling content, improved media handling, Facebook Instant Articles, a liveblog and so on. 
+- A review contenttype that provides all relevant fields to create reviews as structured content.
+- Published reviews include ClaimReview schema.org markup, so that your content can be found easily.
+- A REST-API, so you can reuse your reviews in mobile apps for example.
+- All Thunder features like scheduling content, improved media handling, Facebook Instant Articles, a liveblog and so on. 
  
 
 License: GNU General Public License. Feel free to use it!
@@ -16,19 +16,19 @@ debunkCMS is part of the hoax.ly project, created by acolono GmbH and funded by 
 
 # debunkCMS specific modules
 
-review: Providing the review contenttype and its configuration.
-review_rest: Providing the REST API
-debunkCMS_theme: A theme based on thunder_base to overwrite some templates and colors.
-debunkCMS_demo: Providing demo content.
-schema_claimreview.
+- review, providing the review contenttype and its configuration: https://github.com/hoaxly/debunkcms_review
+- review_rest, providing the REST API: https://github.com/hoaxly/debunkCMS_review_rest
+- debunkCMS_theme, a theme based on thunder_base to overwrite some templates and colors. https://github.com/hoaxly/debunkCMS_theme
+- debunkCMS_demo, providing demo content: https://github.com/hoaxly/debunkCMS_demo
+- schema_claimreview, providing metatag support for the ClaimReview schema.org specification: https://github.com/hoaxly/schema_claimreview
 
 # REST API
 
 When activated it is available using the following paths:
 
-/rest/reviews/all?_format=hal_json
-/rest/reviews/all?_format=json
-/rest/reviews/all?_format=xml
+- /rest/reviews/all?_format=hal_json
+- /rest/reviews/all?_format=json
+- /rest/reviews/all?_format=xml
 
 # TODOS
 - Find a way to overwrite some thunder profile settings.
@@ -38,7 +38,7 @@ When activated it is available using the following paths:
 - Document REST API using swagger.
 
 
-# Composer based Thunder installation
+# Infos about how to work with the Composer based installation
 
 This project template should provide a kickstart for managing your site dependencies with [Composer](https://getcomposer.org/).
 
@@ -57,7 +57,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project burdamagazinorg/thunder-project thunder
+composer create-project hoaxly/debunkCMS debunkCMS
 ```
 
 With `composer require ...` you can download new dependencies to your 
@@ -87,13 +87,13 @@ When installing the given `composer.json` some tasks are taken care of:
 * Latest version of drush is installed locally for use at `bin/drush`.
 * Latest version of DrupalConsole is installed locally for use at `bin/drupal`.
 
-## Installing Thunder
+## Installing
 
-Create project will install Thunder into the docroot directory. You can now install Thunder as you would with any Drupal 8 site. See: [Drupal installation guide](https://www.drupal.org/node/1839310).
+Creating the project will install the CMS into the docroot directory. You can now install it as you would with any Drupal 8 site. See: [Drupal installation guide](https://www.drupal.org/node/1839310).
  
-## Updating Thunder
+## Updating
 
-To update Thunder, Drupal or any module to the newest version, constrained by the specified version in `composer.json`, execute `composer update`. This command will check every dependency for a new version, downloads it and updates the `composer.lock` accordingly.
+To update the distro, Drupal or any module to the newest version, constrained by the specified version in `composer.json`, execute `composer update`. This command will check every dependency for a new version, downloads it and updates the `composer.lock` accordingly.
 After that you can run `drush updb` in the docroot folder to update the database of your site.
 
 ### File update
@@ -107,7 +107,7 @@ new release of Drupal core.
 
 Follow the steps below to update your thunder files.
 
-1. Run `composer update burdamagazinorg/thunder`
+1. Run `composer update hoaxly/debunkCMS`
 1. Run `git diff` to determine if any of the scaffolding files have changed. 
    Review the files for any changes and restore any customizations to 
   `.htaccess` or `robots.txt`.
@@ -165,9 +165,9 @@ achieve that by registering `@drupal-scaffold` as post-install and post-update c
     ]
 },
 ```
-### How can I prevent downloading modules from thunder, that I do not need?
+### How can I prevent downloading modules, that I do not need?
 
-To prevent downloading a module, that Thunder provides but that you do not need, add a replace block to your composer.json:
+To prevent downloading a module, that the project provides but that you do not need, add a replace block to your composer.json:
 
 ```json
 "replace": {
