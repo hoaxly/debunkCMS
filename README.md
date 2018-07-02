@@ -1,6 +1,6 @@
 debunkCMS is a preconfigured CMS for publishing reviews about web content like articles or quotes.
 
-![debunkCMS with example content on iPhone7+](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFcExzxksOgWYgalL6z%2F-LGPJDkVQMSLf102ihWs%2F-LGPL92EcMXGa3ZfkN5r%2FdebunkCMS_iphone.png)
+![debunkCMS with example content on iPhone7+](https://github.com/hoaxly/debunkCMS/blob/develop/documentation/debunkCMS_iphone.png)
 
 It is based on Thunder, a Drupal distribution for professional publishers and includes the following features:
 
@@ -10,24 +10,24 @@ A review content type  provides all relevant fields to create reviews as structu
 
 This fields are currently: 
 
--field_review_content
--field_review_item_media
--field_review_metatags
--field_review_item_publisher
--field_review_rating
--field_review_item_claim
--field_review_item_authors
--field_review_item_country
--field_review_item_language
--field_review_item_pub_date
--field_review_item_tags
--field_review_item_title
--field_review_item_type
--field_review_item_url
--field_seo_title
--field_tags
--field_teaser_text
--field_teaser_media
+- field_review_content
+- field_review_item_media
+- field_review_metatags
+- field_review_item_publisher
+- field_review_rating
+- field_review_item_claim
+- field_review_item_authors
+- field_review_item_country
+- field_review_item_language
+- field_review_item_pub_date
+- field_review_item_tags
+- field_review_item_title
+- field_review_item_type
+- field_review_item_url
+- field_seo_title
+- field_tags
+- field_teaser_text
+- field_teaser_media
 
 These are just the field's machine-names. For every field there is helptext availabe when creating reviews.
 
@@ -41,7 +41,7 @@ Predefined vocabularies, that can be extended, to list authors, publishers, citi
 
 Published reviews include ClaimReview schema.org markup, so that your content can be found easily.
 
-![Example debunkCMS ClaimReview output](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFcExzxksOgWYgalL6z%2F-LGPJDkVQMSLf102ihWs%2F-LGPNmsFiVwUeggqF4DX%2Fschemaorg_examplecontent.png)
+![Example debunkCMS ClaimReview output](https://github.com/hoaxly/debunkCMS/blob/develop/documentation/schemaorg_examplecontent.png)
 
 # Rest API
 
@@ -57,7 +57,7 @@ When activated it is available using the following paths:
 
 debunkCMS includes all Thunder features like story telling, user management, publishing workflows, multilingual, scheduling content, improved media handling, Facebook Instant Articles, embedding social media posts, a liveblog, device specific previews and so on.
 
-![Thunder logo by Hubert Burda Media](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFcExzxksOgWYgalL6z%2F-LGPJDkVQMSLf102ihWs%2F-LGPKKMMhjj-Q7NJ5bJs%2Fthunder.png)
+![Thunder logo by Hubert Burda Media](https://github.com/hoaxly/debunkCMS/blob/develop/documentation/thunder.png)
 
 Thunder has been initiated by Hubert Burda Media and is developed by multiple companies and organisations.
 
@@ -76,9 +76,7 @@ Check the repo issues on github: https://github.com/hoaxly/debunkCMS/issues​
 
 # Roadmap
 - A nicer default theme, that looks like a professional news-site out-of-the-box. Until then you can reuse one of the existing Drupal themes, some work to style reviews might be needed.
-
 - Provide more specific Rest API endpoints (filter by tag, ...).
-
 - Internal search: Search published reviews by tags, authors, city, country, urls, claims, publishers, date, ...
 
 # debunkCMS specific modules
