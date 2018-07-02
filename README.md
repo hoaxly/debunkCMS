@@ -1,18 +1,85 @@
 debunkCMS is a preconfigured CMS for publishing reviews about web content like articles or quotes.
 
-It is based on Thunder, a Drupal distribution for professional publishers.
+![debunkCMS with example content on iPhone7+](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFcExzxksOgWYgalL6z%2F-LGPJDkVQMSLf102ihWs%2F-LGPL92EcMXGa3ZfkN5r%2FdebunkCMS_iphone.png)
 
-Features:
+It is based on Thunder, a Drupal distribution for professional publishers and includes the following features:
 
-- A review contenttype that provides all relevant fields to create reviews as structured content.
-- Published reviews include ClaimReview schema.org markup, so that your content can be found easily.
-- A REST-API, so you can reuse your reviews in mobile apps for example.
-- All Thunder features like scheduling content, improved media handling, Facebook Instant Articles, a liveblog and so on. 
- 
+# Review content type
+
+A review content type  provides all relevant fields to create reviews as structured content. 
+
+This fields are currently: 
+
+-field_review_content
+-field_review_item_media
+-field_review_metatags
+-field_review_item_publisher
+-field_review_rating
+-field_review_item_claim
+-field_review_item_authors
+-field_review_item_country
+-field_review_item_language
+-field_review_item_pub_date
+-field_review_item_tags
+-field_review_item_title
+-field_review_item_type
+-field_review_item_url
+-field_seo_title
+-field_tags
+-field_teaser_text
+-field_teaser_media
+
+These are just the field's machine-names. For every field there is helptext availabe when creating reviews.
+
+There is also predefined configuration for displays (full article, teasers), metatags (meta description, og:*, twitter:card, ...) and url paths.
+
+# Predefined vocabularies
+
+Predefined vocabularies, that can be extended, to list authors, publishers, cities, countries, languages or rating values.
+
+# ClaimReview schema.org markup
+
+Published reviews include ClaimReview schema.org markup, so that your content can be found easily.
+
+![Example debunkCMS ClaimReview output](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFcExzxksOgWYgalL6z%2F-LGPJDkVQMSLf102ihWs%2F-LGPNmsFiVwUeggqF4DX%2Fschemaorg_examplecontent.png)
+
+# Rest API
+
+When activated your published reviews can be accessed via REST.  So you can reuse your reviews in mobile apps for example or make it available to be included in the hoax.ly database easily.
+
+When activated it is available using the following paths:
+
+- /rest/reviews/all?_format=hal_json
+- /rest/reviews/all?_format=json
+- /rest/reviews/all?_format=xml
+
+# Professional publishing features
+
+debunkCMS includes all Thunder features like story telling, user management, publishing workflows, multilingual, scheduling content, improved media handling, Facebook Instant Articles, embedding social media posts, a liveblog, device specific previews and so on.
+
+![Thunder logo by Hubert Burda Media](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFcExzxksOgWYgalL6z%2F-LGPJDkVQMSLf102ihWs%2F-LGPKKMMhjj-Q7NJ5bJs%2Fthunder.png)
+
+Thunder has been initiated by Hubert Burda Media and is developed by multiple companies and organisations.
+
+# Example content
+
+When activated debunkCMS comes with example content (review, authors, rating values, publishers, info-block, ..).
+
+# License
 
 License: GNU General Public License. Feel free to use it!
 
 debunkCMS is part of the hoax.ly project, created by acolono GmbH and funded by netidee.
+
+# Issues
+Check the repo issues on github: https://github.com/hoaxly/debunkCMS/issues​
+
+# Roadmap
+- A nicer default theme, that looks like a professional news-site out-of-the-box. Until then you can reuse one of the existing Drupal themes, some work to style reviews might be needed.
+
+- Provide more specific Rest API endpoints (filter by tag, ...).
+
+- Internal search: Search published reviews by tags, authors, city, country, urls, claims, publishers, date, ...
 
 # debunkCMS specific modules
 
@@ -21,21 +88,6 @@ debunkCMS is part of the hoax.ly project, created by acolono GmbH and funded by 
 - debunkCMS_theme, a theme based on thunder_base to overwrite some templates and colors. https://github.com/hoaxly/debunkCMS_theme
 - debunkCMS_demo, providing demo content: https://github.com/hoaxly/debunkCMS_demo
 - schema_claimreview, providing metatag support for the ClaimReview schema.org specification: https://github.com/hoaxly/schema_claimreview
-
-# REST API
-
-When activated it is available using the following paths:
-
-- /rest/reviews/all?_format=hal_json
-- /rest/reviews/all?_format=json
-- /rest/reviews/all?_format=xml
-
-# TODOS
-- Find a way to overwrite some thunder profile settings.
-
-# Roadmap
-- Include a fancier theme.
-- Document REST API using swagger.
 
 
 # Infos about how to work with the Composer based installation
