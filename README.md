@@ -55,7 +55,18 @@ When activated it is available using the following paths:
 
 # Professional publishing features
 
-debunkCMS includes all Thunder features like story telling, user management, publishing workflows, multilingual, scheduling content, improved media handling, Facebook Instant Articles, embedding social media posts, a liveblog, device specific previews and so on.
+debunkCMS includes all Thunder features like 
+- story telling, 
+- user management, 
+- publishing workflows, 
+- multilingual, 
+- scheduling content, 
+- improved media handling, 
+- Facebook Instant Articles, 
+- embedding social media posts, 
+- a liveblog, 
+- device specific previews 
+- and so on.
 
 ![Thunder logo by Hubert Burda Media](https://github.com/hoaxly/debunkCMS/blob/develop/documentation/thunder.png)
 
